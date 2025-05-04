@@ -36,6 +36,9 @@ print(f'\nTest Loss (MSE): {loss:2f}')
 print(f'Test MAE: {mae:2f}')
 
 
+y_pred = model.predict(X_test_scaled)
+
+
 rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 r2 = r2_score(y_test, y_pred)
 print(f'\nRMSE: {rmse:.2f}')
